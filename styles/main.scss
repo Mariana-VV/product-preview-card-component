@@ -1,0 +1,11 @@
+@use "./variables.scss" as *;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $cream;
+  font-family: "Montserrat", sans-serif;
+  color: $grey;
+  font-weight: 500;
+}

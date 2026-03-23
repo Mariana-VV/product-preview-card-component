@@ -1,0 +1,44 @@
+@use "./variables.scss" as *;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-preset-1 {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2rem;
+  color: $black;
+}
+
+@mixin text-preset-2 {
+  font-size: 0.875rem;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+@mixin text-preset-3 {
+  font-size: 0.875rem;
+  line-height: 160%;
+}
+
+@mixin text-preset-4 {
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+@mixin text-preset-5 {
+  font-size: 0.8125rem;
+  line-height: 120%;
+  text-decoration: line-through;
+}
+
+@mixin onMobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}

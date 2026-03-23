@@ -1,0 +1,77 @@
+@use "./variables.scss" as *;
+@use "./mixins.scss" as *;
+
+.card {
+  max-width: 600px;
+  height: 456px;
+  display: grid;
+  border-radius: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  &__image--mobile {
+    display: none;
+  }
+
+  &__content {
+    padding: 32px;
+    background: $white;
+  }
+
+  &__text {
+    @include text-preset-4;
+  }
+
+  &__title {
+    margin-top: 24px;
+    @include text-preset-1;
+  }
+
+  &__description {
+    @include text-preset-3;
+    margin-top: 24px;
+  }
+
+  &__btn {
+    background: $green500;
+    width: 100%;
+    border-radius: 8px;
+    @include flex;
+    gap: 8px;
+    padding: 17.5px;
+    margin-top: 32px;
+    color: $white;
+    @include text-preset-2;
+    transition: 500ms;
+  }
+
+  &__btn:hover {
+    background: $green700;
+  }
+
+  &__prices {
+    @include flex;
+    justify-content: start;
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  &__price--new {
+    @include text-preset-1;
+    color: $green500;
+  }
+  &__price--old {
+    @include text-preset-5;
+  }
+}
+
+@include onMobile {
+  .card {
+    max-width: 350px;
+    grid-template-columns: 1fr;
+    &__image--mobile {
+      display: block;
+    }
+    &__image--desktop {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list],
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+button:focus {
+  border-color: transparent;
+  outline-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2eae2;
+  font-family: "Montserrat", sans-serif;
+  color: #6c7289;
+  font-weight: 500;
+}
+
+.card {
+  max-width: 600px;
+  height: 456px;
+  display: grid;
+  border-radius: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card__image--mobile {
+  display: none;
+}
+.card__content {
+  padding: 32px;
+  background: #ffffff;
+}
+.card__text {
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.card__title {
+  margin-top: 24px;
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1c232b;
+}
+.card__description {
+  font-size: 0.875rem;
+  line-height: 160%;
+  margin-top: 24px;
+}
+.card__btn {
+  background: #3d8168;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 17.5px;
+  margin-top: 32px;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 110%;
+  font-weight: 700;
+  transition: 500ms;
+}
+.card__btn:hover {
+  background: #1a4032;
+}
+.card__prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  margin-top: 32px;
+  gap: 16px;
+}
+.card__price--new {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1c232b;
+  color: #3d8168;
+}
+.card__price--old {
+  font-size: 0.8125rem;
+  line-height: 120%;
+  text-decoration: line-through;
+}
+
+@media (max-width: 375px) {
+  .card {
+    max-width: 350px;
+    grid-template-columns: 1fr;
+  }
+  .card__image--mobile {
+    display: block;
+  }
+  .card__image--desktop {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */
