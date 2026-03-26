@@ -15,30 +15,29 @@
 
 @mixin text-preset-2 {
   font-size: 0.875rem;
-  line-height: 110%;
+  line-height: 1.1;
   font-weight: 700;
 }
 
 @mixin text-preset-3 {
   font-size: 0.875rem;
-  line-height: 160%;
+  line-height: 1.6;
 }
 
 @mixin text-preset-4 {
   font-size: 0.75rem;
   letter-spacing: 5px;
-  line-height: 120%;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 @mixin text-preset-5 {
   font-size: 0.8125rem;
-  line-height: 120%;
-  text-decoration: line-through;
+  line-height: 1.2;
 }
 
 @mixin onMobile {
-  @media (max-width: 375px) {
+  @media (max-width: 37.5rem) {
     @content;
   }
 }
